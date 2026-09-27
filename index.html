@@ -411,8 +411,19 @@ and to platicons
     }
 
     .social-item .social-link {
+        display: flex;
+        width: 24px;
+        height: 24px;
+        align-items: center;
+        justify-content: center;
         color: var(--light-gray70);
         font-size: 18px;
+    }
+
+    .social-item .social-link svg {
+        display: block;
+        width: 20px;
+        height: 20px;
     }
 
     .social-item .social-link:hover {
@@ -515,7 +526,11 @@ and to platicons
         margin-bottom: 10px;
     }
 
-    .service-icon-box img {
+    .service-icon-box svg {
+        display: block;
+        width: 40px;
+        height: 40px;
+        color: var(--orange-yellow-crayola);
         margin: auto;
     }
 
@@ -1155,6 +1170,12 @@ and to platicons
         margin-bottom: 10px;
     }
 
+    .form-status {
+        margin-top: 12px;
+        color: var(--light-gray);
+        font-size: var(--fs6);
+    }
+
     .form-title {
         margin-bottom: 20px;
     }
@@ -1486,6 +1507,7 @@ and to platicons
         .timeline-list {
             margin-left: 65px;
         }
+
         .timeline-list2 {
             margin-left: 65px;
         }
@@ -1814,7 +1836,7 @@ and to platicons
     <main>
         <aside class="sidebar " data-sidebar>
             <div class="sidebar-info">
-                <figure class="avatar-box" >
+                <figure class="avatar-box">
                     <img src="img/me.JPG" alt="avatar" width="80">
                 </figure>
 
@@ -1854,7 +1876,7 @@ and to platicons
                         <div class="contact-info">
                             <p class="contact-title">Location</p>
 
-                            <address>Batangas, Philippines</address>
+                            <address>Makati, Philippines</address>
                         </div>
                     </li>
                 </ul>
@@ -1863,11 +1885,23 @@ and to platicons
 
                 <ul class="social-list">
                     <li class="social-item"><a href="https://www.facebook.com/johnpaulmarmanjac"
-                            class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
-                    <li class="social-item"><a href="#" class="social-link"><ion-icon
-                                name="logo-twitter"></ion-icon></a></li>
-                    <li class="social-item"><a href="#" class="social-link"><ion-icon
-                                name="logo-instagram"></ion-icon></a></li>
+                            class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><svg
+                                viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor"
+                                    d="M13.5 21v-8.2h2.8l.4-3.2h-3.2V7.5c0-.9.3-1.5 1.6-1.5h1.7V3.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H7.3v3.2h2.8V21h3.4Z" /></svg></a>
+                    </li>
+                    <li class="social-item"><a href="https://github.com/nhojp" class="social-link" aria-label="GitHub"
+                            target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill="currentColor"
+                                    d="M12 .8a11.2 11.2 0 0 0-3.54 21.83c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.73 1.16 1.73 1.16 1 1.72 2.63 1.23 3.27.94.1-.73.39-1.23.71-1.51-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.02-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.08 1.15a10.7 10.7 0 0 1 5.6 0c2.13-1.45 3.08-1.15 3.08-1.15.61 1.55.23 2.7.11 2.98.72.79 1.16 1.79 1.16 3.02 0 4.32-2.63 5.27-5.14 5.55.4.35.76 1.03.76 2.08v3.1c0 .3.2.65.77.54A11.2 11.2 0 0 0 12 .8Z" />
+                            </svg></a></li>
+                    <li class="social-item"><a href="https://www.instagram.com/jpyo_mn/" class="social-link"
+                            aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"
+                                aria-hidden="true">
+                                <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor"
+                                    stroke-width="2" />
+                                <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2" />
+                                <circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" />
+                            </svg></a></li>
                 </ul>
             </div>
         </aside>
@@ -1878,7 +1912,6 @@ and to platicons
                     <li class="navbar-item"><button class="navbar-link active" data-nav-link>About</button></li>
                     <li class="navbar-item"><button class="navbar-link" data-nav-link>Resume</button></li>
                     <li class="navbar-item"><button class="navbar-link" data-nav-link>Achievements</button></li>
-                    <li class="navbar-item"><button class="navbar-link" data-nav-link>Portfolio</button></li>
                     <li class="navbar-item"><button class="navbar-link" data-nav-link>Contact</button></li>
                 </ul>
             </nav>
@@ -1889,13 +1922,23 @@ and to platicons
                 </header>
 
                 <section class="about-text">
-                    <p>I’m a Digital Project Manager with a strong technical foundation and a passion for building practical digital solutions. My experience sits at the intersection of project management, technology, and problem-solving, with a growing focus on Technical Project Management, Software Engineering, AI Automation, Data Analytics, and Web Development.</p>
-                    <p>In my current role, I manage digital projects and collaborate with cross-functional teams to turn requirements into successful deliverables. Beyond project coordination, I’m interested in understanding the technical side of products, improving workflows, automating repetitive processes, and finding data-driven ways to make teams more efficient.</p>
-                    <p>I also have experience in web development and IT instruction, which has strengthened both my technical skills and my ability to communicate complex concepts clearly.</p>
-                    <p>I’m continuously expanding my technical capabilities with the long-term goal of becoming a Technical Project Manager who can bridge the gap between business requirements and engineering teams — someone who understands both how to manage the work and how the technology behind it works.</p>
-                
-                
-                
+                    <p>I’m a Digital Project Manager with a strong technical foundation and a passion for building
+                        practical digital solutions. My experience sits at the intersection of project management,
+                        technology, and problem-solving, with a growing focus on Technical Project Management, Software
+                        Engineering, AI Automation, Data Analytics, and Web Development.</p>
+                    <p>In my current role, I manage digital projects and collaborate with cross-functional teams to turn
+                        requirements into successful deliverables. Beyond project coordination, I’m interested in
+                        understanding the technical side of products, improving workflows, automating repetitive
+                        processes, and finding data-driven ways to make teams more efficient.</p>
+                    <p>I also have experience in web development and IT instruction, which has strengthened both my
+                        technical skills and my ability to communicate complex concepts clearly.</p>
+                    <p>I’m continuously expanding my technical capabilities with the long-term goal of becoming a
+                        Technical Project Manager who can bridge the gap between business requirements and engineering
+                        teams — someone who understands both how to manage the work and how the technology behind it
+                        works.</p>
+
+
+
                 </section>
 
                 <section class="service">
@@ -1904,7 +1947,11 @@ and to platicons
                     <ul class="service-list">
                         <li class="service-item">
                             <div class="service-icon-box">
-                                <img src="img/pm.png" alt="icon" width="40">
+                                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <rect x="6" y="14" width="36" height="26" rx="4" />
+                                    <path d="M17 14V9h14v5M6 24h36M20 24v4h8v-4" />
+                                </svg>
                             </div>
 
                             <div class="service-content-box">
@@ -1915,18 +1962,29 @@ and to platicons
 
                         <li class="service-item">
                             <div class="service-icon-box">
-                                <img src="img/web_design.png" alt="icon" width="40">
+                                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <rect x="12" y="12" width="24" height="24" rx="5" />
+                                    <path d="M19 19h10v10H19zM18 5v7m12-7v7M18 36v7m12-7v7M5 18h7m-7 12h7m24-12h7m-7 12h7" />
+                                </svg>
                             </div>
 
                             <div class="service-content-box">
                                 <h4 class="h4 service-item-title">AI Automation</h4>
-                                <p class="service-item-text">Automates repetitive tasks leveraging AI and other tools.</p>
+                                <p class="service-item-text">Automates repetitive tasks leveraging AI and other tools.
+                                </p>
                             </div>
                         </li>
 
                         <li class="service-item">
                             <div class="service-icon-box">
-                                <img src="img/web_design.png" alt="icon" width="40">
+                                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M24 6a18 18 0 1 0 0 36h3a5 5 0 0 0 3-9 3 3 0 0 1 2-5h4a6 6 0 0 0 6-6C42 13 34 6 24 6Z" />
+                                    <circle cx="15" cy="21" r="1.5" />
+                                    <circle cx="22" cy="14" r="1.5" />
+                                    <circle cx="31" cy="15" r="1.5" />
+                                </svg>
                             </div>
 
                             <div class="service-content-box">
@@ -1938,7 +1996,10 @@ and to platicons
 
                         <li class="service-item">
                             <div class="service-icon-box">
-                                <img src="img/web_development.png" alt="icon" width="40">
+                                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"
+                                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="m17 14-10 10 10 10m14-20 10 10-10 10M28 9l-8 30" />
+                                </svg>
                             </div>
 
                             <div class="service-content-box">
@@ -1950,7 +2011,10 @@ and to platicons
 
                         <li class="service-item">
                             <div class="service-icon-box">
-                                <img src="img/data_analytics.png" alt="icon" width="40">
+                                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M7 41V25h9v16m4 0V12h9v29m4 0V19h9v22M5 41h39" />
+                                </svg>
                             </div>
 
                             <div class="service-content-box">
@@ -1961,13 +2025,33 @@ and to platicons
 
                         <li class="service-item">
                             <div class="service-icon-box">
-                                <img src="img/tech_support.png" alt="icon" width="40">
+                                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M8 27v-5a16 16 0 0 1 32 0v5M8 25H6a3 3 0 0 0-3 3v6a3 3 0 0 0 3 3h5V25H8Zm32 0h2a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3h-5V25h3Zm-3 12a13 13 0 0 1-12 7h-4" />
+                                </svg>
                             </div>
 
                             <div class="service-content-box">
                                 <h4 class="h4 service-item-title">Technical Support</h4>
                                 <p class="service-item-text">I provide hands-on technical support across variety of
                                     systems, resolving hardware, software and network issues. </p>
+                            </div>
+                        </li>
+
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <svg viewBox="0 0 48 48" aria-hidden="true">
+                                    <rect x="7" y="7" width="14" height="14" rx="4" fill="#4285f4" />
+                                    <rect x="27" y="7" width="14" height="14" rx="4" fill="#ea4335" />
+                                    <rect x="7" y="27" width="14" height="14" rx="4" fill="#34a853" />
+                                    <rect x="27" y="27" width="14" height="14" rx="4" fill="#fbbc05" />
+                                </svg>
+                            </div>
+
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Google Workspace</h4>
+                                <p class="service-item-text">Strong proficiency using Google Workspace to collaborate,
+                                    organize work, and manage documents, spreadsheets, and presentations.</p>
                             </div>
                         </li>
                     </ul>
@@ -2111,6 +2195,24 @@ and to platicons
 
                     <ol class="timeline-list">
                         <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Digital Project Manager I</h4>
+                            <span>Datawords</span>
+                            <span>August 2025 - Present</span>
+                            <p class="timeline-text">
+                                Digital Project Manager responsible for planning and coordinating end-to-end digital
+                                projects, managing workloads, timelines, priorities, and resources across
+                                cross-functional teams, negotiating scope and delivery expectations, and driving
+                                quality improvements throughout the project lifecycle. Experienced in client-facing
+                                communication and stakeholder management, as well as coordinating internal technical
+                                and production teams to ensure smooth execution and timely delivery. Acts as a bridge
+                                between project management and technical teams by translating business requirements
+                                into actionable technical deliverables, while leveraging knowledge of software
+                                development, SFCC, AI automation, data analytics, and web technologies to improve
+                                processes and deliver effective digital solutions.
+                            </p>
+                        </li>
+
+                        <li class="timeline-item">
                             <h4 class="h4 timeline-item-title">IT Instructor</h4>
                             <span>Mindtech Incorporated</span>
                             <span>May 2025 - Present </span>
@@ -2123,7 +2225,7 @@ and to platicons
                                 excel in the rapidly advancing tech field.
                             </p>
                         </li>
-                    
+
                         <li class="timeline-item">
                             <h4 class="h4 timeline-item-title">IT Intern</h4>
                             <span>South Luzon Thermal Energy Corporation</span>
@@ -2385,7 +2487,7 @@ and to platicons
 
             </article>
 
-            <article class="portfolio " data-page="portfolio">
+            <article class="portfolio " data-page="portfolio" hidden>
                 <header>
                     <h2 class="h2 article-title">Portfolio</h2>
                 </header>
@@ -2690,19 +2792,22 @@ and to platicons
                 <section class="mapbox" data-mapbox>
                     <figure>
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
-                            width="400" height="300" loading="lazy"></iframe>
+                            src="https://maps.google.com/maps?q=Makati%2C%20Philippines&amp;output=embed"
+                            title="Map of Makati, Philippines" width="400" height="300" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </figure>
                 </section>
 
                 <section class="contact-form">
                     <h3 class="h3 form-title">Contact Form</h3>
 
-                    <form action="#" class="form" data-form>
+                    <form action="https://formsubmit.co/johnpaulmarmanjac@gmail.com" method="POST" class="form"
+                        data-form>
+                        <input type="hidden" name="_subject" value="New portfolio contact message">
                         <div class="input-wrapper">
                             <input type="text" name="fullname" class="form-input" placeholder="Full name" required
                                 data-form-input>
-                            <input type="email" name="email" class="form-input" placeholder="Email Address" required
+                            <input type="email" name="_replyto" class="form-input" placeholder="Email Address" required
                                 data-form-input>
                         </div>
 
@@ -2713,6 +2818,7 @@ and to platicons
                             <ion-icon name="paper-plane"></ion-icon>
                             <span>Send Message</span>
                         </button>
+                        <p class="form-status" data-form-status role="status" aria-live="polite"></p>
                     </form>
                 </section>
             </article>
@@ -2731,12 +2837,12 @@ and to platicons
 
     //Opening or closing side bar
 
-    const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
+    const elementToggleFunc = function (elem) {elem.classList.toggle("active");}
 
     const sidebar = document.querySelector("[data-sidebar]");
     const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 
-    sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); })
+    sidebarBtn.addEventListener("click", function () {elementToggleFunc(sidebar);})
 
     //Activating Modal-testimonial
 
@@ -2777,7 +2883,7 @@ and to platicons
     const selectValue = document.querySelector('[data-select-value]');
     const filterBtn = document.querySelectorAll('[data-filter-btn]');
 
-    select.addEventListener('click', function () { elementToggleFunc(this); });
+    select.addEventListener('click', function () {elementToggleFunc(this);});
 
     for (let i = 0; i < selectItems.length; i++) {
         selectItems[i].addEventListener('click', function () {
@@ -2828,21 +2934,51 @@ and to platicons
     const form = document.querySelector('[data-form]');
     const formInputs = document.querySelectorAll('[data-form-input]');
     const formBtn = document.querySelector('[data-form-btn]');
+    const formStatus = document.querySelector('[data-form-status]');
 
     for (let i = 0; i < formInputs.length; i++) {
         formInputs[i].addEventListener('input', function () {
-            if (form.checkValidity()) {
-                formBtn.removeAttribute('disabled');
-            } else {
-                formBtn.setAttribute('disabled', '');
-            }
+            formBtn.disabled = !form.checkValidity();
         })
     }
+
+    form.addEventListener('submit', async function (event) {
+        event.preventDefault();
+        if (!form.reportValidity()) return;
+
+        formBtn.disabled = true;
+        formBtn.querySelector('span').textContent = 'Sending...';
+        formStatus.textContent = '';
+
+        try {
+            const response = await fetch('https://formsubmit.co/ajax/johnpaulmarmanjac@gmail.com', {
+                method: 'POST',
+                headers: { 'Accept': 'application/json' },
+                body: new FormData(form)
+            });
+            const result = await response.json();
+
+            if (!response.ok || String(result.success).toLowerCase() !== 'true') {
+                throw new Error(result.message || 'The message could not be sent. Please try again.');
+            }
+
+            formStatus.textContent = 'Thanks! Your message has been sent.';
+            form.reset();
+        } catch (error) {
+            console.error('Contact form submission failed:', error);
+            formStatus.textContent = error instanceof Error
+                ? `${error.message} You can also email johnpaulmarmanjac@gmail.com directly.`
+                : 'The message could not be sent. Please try again or email johnpaulmarmanjac@gmail.com directly.';
+        } finally {
+            formBtn.querySelector('span').textContent = 'Send Message';
+            formBtn.disabled = !form.checkValidity();
+        }
+    });
 
     // Enabling Page Navigation 
 
     const navigationLinks = document.querySelectorAll('[data-nav-link]');
-    const pages = document.querySelectorAll('[data-page]');
+    const pages = document.querySelectorAll('[data-page]:not([hidden])');
 
     for (let i = 0; i < navigationLinks.length; i++) {
         navigationLinks[i].addEventListener('click', function () {
